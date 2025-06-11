@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #61576c;
+  color:#aaaaaa;
+  font-family: 'Montserrat', sans-serif;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile-card {
+  background: #424445;
+  border-radius: 25px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  animation: fadeIn 1s ease-in;
+}
+
+.profile-img {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-img img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+
+.title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 0.3rem;
+  color: #aaa;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.about p,
+.contact p {
+  font-size: 1.05rem;
+  color: #ddd;
+}
+
+.skills .skill {
+  margin-bottom: 1rem;
+}
+
+.skills .skill span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  color: #eee;
+}
+
+.skills .bar {
+  height: 10px;
+  background: #555;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skills .bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: white;
+  animation: grow 2s ease forwards;
+}
+
+.skills .bar.html::before { width: 90%; }
+.skills .bar.css::before { width: 95%; }
+.skills .bar.python::before { width: 80%; }
+
+.hobbies ul {
+  list-style: none;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes grow {
+  from { width: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
